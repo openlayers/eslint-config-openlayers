@@ -40,6 +40,7 @@
     "no-redeclare": 2,
     "no-regex-spaces": 2,
     "no-sparse-arrays": 2,
+    "no-trailing-spaces": 2,
     "no-undef": 2,
     "no-unexpected-multiline": 2,
     "no-unreachable": 2,
