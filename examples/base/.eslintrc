@@ -1,0 +1,10 @@
+{
+
+  "extends": "../../index.js", // this would be "openlayers" in your config
+
+  // custom config below
+  "globals": {
+    "Promise": false
+  }
+
+}
