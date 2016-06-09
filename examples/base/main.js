@@ -22,7 +22,7 @@ if (require.main === module) {
   main(paths).then(function(contents) {
     contents.forEach(function(content, index) {
       process.stdout.write(paths[index] + '\n' + content + '\n');
-    })
+    });
   }).catch(function(err) {
     process.stderr.write('Failed: ' + err.message + '\n');
   });
