@@ -9,6 +9,7 @@ module.exports = {
     'brace-style': 2,
     'comma-dangle': [2, 'never'],
     'comma-style': 2,
+    'curly': 2,
     'default-case': 2,
     'eol-last': 2,
     'indent': [2, 2, {VariableDeclarator: 2, SwitchCase: 1}],
