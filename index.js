@@ -13,6 +13,7 @@ module.exports = {
     'default-case': 2,
     'eol-last': 2,
     'indent': [2, 2, {VariableDeclarator: 2, SwitchCase: 1}],
+    'key-spacing': 2,
     'keyword-spacing': 2,
     'no-cond-assign': 2,
     'no-console': 2,
