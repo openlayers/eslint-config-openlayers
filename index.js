@@ -8,6 +8,7 @@ module.exports = {
     'block-scoped-var': 2,
     'brace-style': 2,
     'comma-dangle': [2, 'never'],
+    'comma-spacing': 2,
     'comma-style': 2,
     'curly': 2,
     'default-case': 2,
