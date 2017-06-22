@@ -63,6 +63,10 @@ You should add and example for your new profile and ensure that tests pass with 
 
     npm test
 
+To have `eslint` fix errors in the examples, run the `lint` task with the `--fix` argument:
+
+    npm run lint -- --fix
+
 After adding a new config profile or modifying an existing one, publish a new version of the package.  Adding a new "error" level rule constitutes a major release.  A new profile or non-breaking modification to an existing profile (e.g. a "warning" level rule) can be a minor release.
 
 Publishing a new minor release would look like this:
