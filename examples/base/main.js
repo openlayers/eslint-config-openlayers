@@ -1,5 +1,5 @@
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
 function main(paths) {
   return Promise.all(paths.map(function(name) {
@@ -16,7 +16,7 @@ function main(paths) {
 }
 
 if (require.main === module) {
-  var paths = ['main.js', '.eslintrc'].map(function(name) {
+  const paths = ['main.js', '.eslintrc'].map(function(name) {
     return path.join(__dirname, name);
   });
   main(paths).then(function(contents) {
