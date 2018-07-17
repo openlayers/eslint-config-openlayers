@@ -48,6 +48,7 @@ module.exports = {
     'no-redeclare': 'error',
     'no-regex-spaces': 'error',
     'no-sparse-arrays': 'error',
+    'no-this-before-super': 'error',
     'no-trailing-spaces': 'error',
     'no-undef': 'error',
     'no-unexpected-multiline': 'error',
