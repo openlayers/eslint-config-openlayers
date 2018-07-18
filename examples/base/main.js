@@ -1,5 +1,6 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import {foo} from './mod';
 
 function main(paths) {
   return Promise.all(paths.map(function(name) {
@@ -16,6 +17,8 @@ function main(paths) {
 }
 
 if (require.main === module) {
+  process.stdout.write(foo());
+
   const paths = ['main.js', '.eslintrc'].map(function(name) {
     return path.join(__dirname, name);
   });

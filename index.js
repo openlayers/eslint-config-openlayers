@@ -7,6 +7,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module'
   },
+  plugins: ['import'],
   rules: {
     'array-bracket-spacing': 'error',
     'block-scoped-var': 'error',
@@ -18,6 +19,9 @@ module.exports = {
     'default-case': 'error',
     'eol-last': 'error',
     'indent': ['error', 2, {VariableDeclarator: 2, SwitchCase: 1}],
+    'import/no-unresolved': ['error', {commonjs: true}],
+    'import/named': 'error',
+    'import/default': 'error',
     'key-spacing': 'error',
     'keyword-spacing': 'error',
     'no-cond-assign': 'error',
