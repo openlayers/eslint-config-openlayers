@@ -31,6 +31,7 @@ module.exports = {
     'no-debugger': 'error',
     'no-delete-var': 'error',
     'no-dupe-args': 'error',
+    'no-dupe-class-members': 'error',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
     'no-empty': 'error',
