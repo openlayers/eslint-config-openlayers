@@ -22,6 +22,7 @@ module.exports = {
     'import/no-unresolved': ['error', {commonjs: true}],
     'import/named': 'error',
     'import/default': 'error',
+    'import/extensions': ['error', 'always', {ignorePackages: true}],
     'key-spacing': 'error',
     'keyword-spacing': 'error',
     'no-cond-assign': 'error',

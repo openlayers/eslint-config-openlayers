@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import {foo} from './mod';
+import {foo} from './mod.js';
 
 function main(paths) {
   return Promise.all(paths.map(function(name) {
