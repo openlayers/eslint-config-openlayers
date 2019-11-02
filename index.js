@@ -48,6 +48,7 @@ module.exports = {
     'no-irregular-whitespace': 'error',
     'no-mixed-spaces-and-tabs': ['error', false],
     'no-multiple-empty-lines': 'error',
+    'no-multi-assign': 'error',
     'no-multi-spaces': 'error',
     'no-negated-in-lhs': 'error',
     'no-obj-calls': 'error',
