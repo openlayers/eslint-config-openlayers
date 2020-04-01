@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ['./index.js'],
+  extends: ['./index.js', 'prettier/react'],
+  plugins: ['react'],
   env: {
     browser: true,
     es6: true,
@@ -52,7 +53,6 @@ module.exports = {
     'no-sparse-arrays': 'error',
     'no-undef': 'error',
     'no-underscore-dangle': 'off',
-    'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
     'no-unsafe-finally': 'error',
     'no-unused-vars': ['error', {ignoreRestSiblings: true}],

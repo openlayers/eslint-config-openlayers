@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-openlayers",
-  "version": "13.0.0",
+  "version": "14.0.0-beta.2",
   "description": "ESLint configuration for OpenLayers",
   "main": "index.js",
   "repository": {
@@ -12,8 +12,14 @@
   },
   "scripts": {
     "lint": "eslint . examples",
-    "test": "npm run lint"
+    "test": "npm run check-base && npm run check-react && npm run lint",
+    "check-base": "eslint --print-config examples/base/.eslintrc | eslint-config-prettier-check",
+    "check-react": "eslint --print-config examples/react/.eslintrc | eslint-config-prettier-check"
   },
+  "files": [
+    "index.js",
+    "react.js"
+  ],
   "license": "MIT",
   "eslintConfig": {
     "extends": "./index.js"
