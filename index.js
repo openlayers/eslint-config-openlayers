@@ -2,23 +2,23 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
   },
   parserOptions: {
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: ['import'],
+  plugins: ['import', 'sort-imports-es6-autofix', 'prettier', 'react'],
+  extends: ['prettier', 'prettier/react'],
   rules: {
     'array-bracket-spacing': 'error',
     'block-scoped-var': 'error',
     'brace-style': 'error',
-    'comma-dangle': ['error', 'never'],
     'comma-spacing': 'error',
     'comma-style': 'error',
-    'curly': 'error',
+    curly: 'error',
     'default-case': 'error',
     'eol-last': 'error',
-    'indent': ['error', 2, {VariableDeclarator: 2, SwitchCase: 1}],
+    indent: ['error', 2, {VariableDeclarator: 2, SwitchCase: 1}],
     'import/no-unresolved': ['error', {commonjs: true}],
     'import/named': 'error',
     'import/default': 'error',
@@ -66,25 +66,44 @@ module.exports = {
     'no-var': 'error',
     'object-curly-spacing': 'error',
     'prefer-const': 'error',
-    'quotes': ['error', 'single'],
-    'semi': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        bracketSpacing: false,
+        quoteProps: 'preserve',
+      },
+    ],
+    quotes: ['error', 'single'],
+    semi: 'error',
     'semi-spacing': 'error',
+    'sort-imports-es6-autofix/sort-imports-es6': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+      },
+    ],
     'space-before-blocks': 'error',
     'space-before-function-paren': [
       'error',
       {
-        'asyncArrow': 'always',
-        'named': 'never',
-        'anonymous': 'never'
-      }
+        asyncArrow: 'always',
+        named: 'never',
+        anonymous: 'always',
+      },
     ],
     'space-in-parens': 'error',
     'space-infix-ops': 'error',
     'space-unary-ops': 'error',
     'use-isnan': 'error',
-    'valid-jsdoc': ['error', {
-      requireReturn: false
-    }],
-    'valid-typeof': 'error'
-  }
+    'valid-jsdoc': [
+      'error',
+      {
+        requireReturn: false,
+      },
+    ],
+    'valid-typeof': 'error',
+  },
 };
