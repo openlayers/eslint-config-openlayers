@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-openlayers",
-  "version": "14.0.0-beta.2",
+  "version": "14.0.0",
   "description": "ESLint configuration for OpenLayers",
   "main": "index.js",
   "repository": {
