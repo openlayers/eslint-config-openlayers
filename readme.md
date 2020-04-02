@@ -72,4 +72,4 @@ Publishing a new minor release would look like this:
     git push --tags origin master
     npm publish
 
-[![Build Status](https://travis-ci.org/openlayers/eslint-config-openlayers.svg?branch=master)](https://travis-ci.org/openlayers/eslint-config-openlayers)
+![Build Status](https://github.com/openlayers/eslint-config-openlayers/workflows/Test/badge.svg)
