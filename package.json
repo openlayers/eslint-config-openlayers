@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-openlayers",
-  "version": "13.0.0",
+  "version": "14.0.0-beta.2",
   "description": "ESLint configuration for OpenLayers",
   "main": "index.js",
   "repository": {
@@ -11,23 +11,34 @@
     "url": "https://github.com/openlayers/eslint-config-openlayers/issues"
   },
   "scripts": {
-    "test": "eslint . examples"
+    "lint": "eslint . examples",
+    "test": "npm run check-base && npm run check-react && npm run lint",
+    "check-base": "eslint --print-config examples/base/.eslintrc | eslint-config-prettier-check",
+    "check-react": "eslint --print-config examples/react/.eslintrc | eslint-config-prettier-check"
   },
+  "files": [
+    "index.js",
+    "react.js"
+  ],
   "license": "MIT",
   "eslintConfig": {
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.13.0",
-    "prettier": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
+  "peerDependencies": {
+    "eslint": ">= 6.8"
+  },
   "dependencies": {
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
+    "prettier": "^2.0.2"
   }
 }

@@ -2,29 +2,21 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
   },
   parserOptions: {
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: ['import'],
+  plugins: ['import', 'sort-imports-es6-autofix', 'prettier'],
+  extends: ['prettier'],
   rules: {
-    'array-bracket-spacing': 'error',
     'block-scoped-var': 'error',
-    'brace-style': 'error',
-    'comma-dangle': ['error', 'never'],
-    'comma-spacing': 'error',
-    'comma-style': 'error',
-    'curly': 'error',
+    curly: 'error',
     'default-case': 'error',
-    'eol-last': 'error',
-    'indent': ['error', 2, {VariableDeclarator: 2, SwitchCase: 1}],
     'import/no-unresolved': ['error', {commonjs: true}],
     'import/named': 'error',
     'import/default': 'error',
     'import/extensions': ['error', 'always', {ignorePackages: true}],
-    'key-spacing': 'error',
-    'keyword-spacing': 'error',
     'no-cond-assign': 'error',
     'no-console': 'error',
     'no-const-assign': 'error',
@@ -40,16 +32,12 @@ module.exports = {
     'no-eq-null': 'error',
     'no-ex-assign': 'error',
     'no-extra-boolean-cast': 'error',
-    'no-extra-semi': 'error',
     'no-fallthrough': 'error',
     'no-func-assign': 'error',
     'no-inner-declarations': ['error', 'functions'],
     'no-invalid-regexp': 'error',
     'no-irregular-whitespace': 'error',
-    'no-mixed-spaces-and-tabs': ['error', false],
-    'no-multiple-empty-lines': 'error',
     'no-multi-assign': 'error',
-    'no-multi-spaces': 'error',
     'no-negated-in-lhs': 'error',
     'no-obj-calls': 'error',
     'no-octal': 'error',
@@ -57,34 +45,35 @@ module.exports = {
     'no-regex-spaces': 'error',
     'no-sparse-arrays': 'error',
     'no-this-before-super': 'error',
-    'no-trailing-spaces': 'error',
     'no-undef': 'error',
-    'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
     'no-unused-vars': ['error', {vars: 'all', args: 'none'}],
     'no-use-before-define': ['error', 'nofunc'],
     'no-var': 'error',
-    'object-curly-spacing': 'error',
     'prefer-const': 'error',
-    'quotes': ['error', 'single'],
-    'semi': 'error',
-    'semi-spacing': 'error',
-    'space-before-blocks': 'error',
-    'space-before-function-paren': [
+    'prettier/prettier': [
       'error',
       {
-        'asyncArrow': 'always',
-        'named': 'never',
-        'anonymous': 'never'
-      }
+        singleQuote: true,
+        bracketSpacing: false,
+        quoteProps: 'preserve',
+      },
     ],
-    'space-in-parens': 'error',
-    'space-infix-ops': 'error',
-    'space-unary-ops': 'error',
+    'sort-imports-es6-autofix/sort-imports-es6': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+      },
+    ],
     'use-isnan': 'error',
-    'valid-jsdoc': ['error', {
-      requireReturn: false
-    }],
-    'valid-typeof': 'error'
-  }
+    'valid-jsdoc': [
+      'error',
+      {
+        requireReturn: false,
+      },
+    ],
+    'valid-typeof': 'error',
+  },
 };

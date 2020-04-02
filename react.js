@@ -1,29 +1,29 @@
 module.exports = {
-  extends: ['prettier', 'prettier/react'],
-  plugins: ['prettier', 'react'],
+  extends: ['./index.js', 'prettier/react'],
+  plugins: ['react'],
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   parserOptions: {
     ecmaVersion: 9,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   rules: {
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
-    'curly': 'error',
+    curly: 'error',
     'default-case': 'error',
     'dot-notation': ['error', {allowPattern: '^[a-z]+(_[a-z]+)+$'}],
-    'eqeqeq': 'error',
+    eqeqeq: 'error',
     'no-case-declarations': 'error',
     'no-cond-assign': 'error',
     'no-console': 'error',
@@ -53,13 +53,11 @@ module.exports = {
     'no-sparse-arrays': 'error',
     'no-undef': 'error',
     'no-underscore-dangle': 'off',
-    'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
     'no-unsafe-finally': 'error',
     'no-unused-vars': ['error', {ignoreRestSiblings: true}],
     'no-use-before-define': ['error', 'nofunc'],
     'prefer-const': 'error',
-    'prettier/prettier': ['error', {singleQuote: true, bracketSpacing: false}],
     'react/jsx-boolean-value': 'error',
     'react/jsx-key': 'error',
     'react/jsx-no-duplicate-props': 'error',
@@ -78,8 +76,8 @@ module.exports = {
     'react/prop-types': 'error',
     'react/react-in-jsx-scope': 'error',
     'react/sort-prop-types': 'off',
-    'strict': 'off',
+    strict: 'off',
     'use-isnan': 'error',
-    'valid-typeof': 'error'
-  }
+    'valid-typeof': 'error',
+  },
 };

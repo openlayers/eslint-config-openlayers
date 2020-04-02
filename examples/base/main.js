@@ -3,30 +3,35 @@ import path from 'path';
 import {foo} from './mod.js';
 
 function main(paths) {
-  return Promise.all(paths.map(function(name) {
-    return new Promise(function(resolve, reject) {
-      fs.readFile(name, function(err, data) {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(String(data));
-        }
+  return Promise.all(
+    paths.map((name) => {
+      return new Promise((resolve, reject) => {
+        fs.readFile(name, (err, data) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(String(data));
+          }
+        });
       });
-    });
-  }));
+    })
+  );
 }
 
 if (require.main === module) {
   process.stdout.write(foo());
 
-  const paths = ['main.js', '.eslintrc'].map(function(name) {
-    return path.join(__dirname, name);
-  });
-  main(paths).then(function(contents) {
-    contents.forEach(function(content, index) {
-      process.stdout.write(paths[index] + '\n' + content + '\n');
+  const paths = /** @type {Array<string>} */ (['main.js', '.eslintrc']);
+
+  const mapped = paths.map((name) => path.join(__dirname, name));
+
+  main(mapped)
+    .then((contents) => {
+      contents.forEach((content, index) => {
+        process.stdout.write(paths[index] + '\n' + content + '\n');
+      });
+    })
+    .catch((err) => {
+      process.stderr.write('Failed: ' + err.message + '\n');
     });
-  }).catch(function(err) {
-    process.stderr.write('Failed: ' + err.message + '\n');
-  });
 }

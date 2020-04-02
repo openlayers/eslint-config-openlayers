@@ -8,7 +8,7 @@ class Widget extends Component {
 }
 
 Widget.propTypes = {
-  name: string.isRequired
+  name: string.isRequired,
 };
 
 export default Widget;
