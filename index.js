@@ -7,7 +7,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
-  plugins: ['import', 'sort-imports-es6-autofix', 'prettier'],
+  plugins: ['import', 'sort-imports-es6-autofix', 'prettier', 'jsdoc'],
   extends: ['prettier'],
   rules: {
     'block-scoped-var': 'error',
@@ -17,6 +17,49 @@ module.exports = {
     'import/named': 'error',
     'import/default': 'error',
     'import/extensions': ['error', 'always', {ignorePackages: true}],
+    "jsdoc/check-access": 'error',
+    "jsdoc/check-alignment": 'error',
+    "jsdoc/check-examples": 'error',
+    "jsdoc/check-indentation": 'off',
+    "jsdoc/check-line-alignment": 'error',
+    "jsdoc/check-param-names": 'error',
+    "jsdoc/check-property-names": 'error',
+    "jsdoc/check-syntax": 'error',
+    "jsdoc/check-tag-names": ['error', {
+      "definedTags": ["api"]
+    }],
+    "jsdoc/check-types": 'error',
+    "jsdoc/check-values": 'error',
+    "jsdoc/empty-tags": 'error',
+    "jsdoc/implements-on-classes": 'error',
+    "jsdoc/match-description": 'off',
+    "jsdoc/newline-after-description": 'off',
+    "jsdoc/no-bad-blocks": 'error',
+    "jsdoc/no-defaults": 'error',
+    "jsdoc/no-types": 'off',
+    "jsdoc/no-undefined-types": ['error', {
+      'definedTypes': ['ol'] // should this be allowed?
+    }],
+    "jsdoc/require-description": 'off',
+    "jsdoc/require-description-complete-sentence": 'off', // some issues with description starting with line break
+    "jsdoc/require-example": 'off',
+    "jsdoc/require-file-overview": 'off',
+    "jsdoc/require-hyphen-before-param-description": ['error', 'never'],
+    "jsdoc/require-jsdoc": 'off',
+    "jsdoc/require-param": 'error',
+    "jsdoc/require-param-description": 'error',
+    "jsdoc/require-param-name": 'error',
+    "jsdoc/require-param-type": 'error',
+    "jsdoc/require-property": 'error',
+    "jsdoc/require-property-description": 'error',
+    "jsdoc/require-property-name": 'error',
+    "jsdoc/require-property-type": 'error',
+    "jsdoc/require-returns": 'off',
+    "jsdoc/require-returns-check": 'error',
+    "jsdoc/require-returns-description": 'error',
+    "jsdoc/require-returns-type": 'error',
+    "jsdoc/require-yields": 'error',
+    "jsdoc/valid-types": 'error',
     'no-cond-assign': 'error',
     'no-console': 'error',
     'no-const-assign': 'error',
@@ -68,12 +111,14 @@ module.exports = {
       },
     ],
     'use-isnan': 'error',
-    'valid-jsdoc': [
-      'error',
-      {
-        requireReturn: false,
-      },
-    ],
-    'valid-typeof': 'error',
+    'valid-typeof': 'error'
   },
+  'settings': {
+    'jsdoc': {
+      'mode': 'typescript',
+      "tagNamePreference": {
+        "returns": "return"
+      }
+    }
+  }
 };
