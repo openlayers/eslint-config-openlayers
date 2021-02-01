@@ -17,49 +17,58 @@ module.exports = {
     'import/named': 'error',
     'import/default': 'error',
     'import/extensions': ['error', 'always', {ignorePackages: true}],
+
+    // validity
     "jsdoc/check-access": 'error',
-    "jsdoc/check-alignment": 'error',
-    "jsdoc/check-examples": 'error',
-    "jsdoc/check-indentation": 'off',
-    "jsdoc/check-line-alignment": 'error',
     "jsdoc/check-param-names": 'error',
     "jsdoc/check-property-names": 'error',
-    "jsdoc/check-syntax": 'error',
+    // "jsdoc/check-syntax": 'error', // the mode is 'typescript' and it errors for closure syntax
     "jsdoc/check-tag-names": ['error', {
       "definedTags": ["api"]
     }],
-    "jsdoc/check-types": 'error',
-    "jsdoc/check-values": 'error',
     "jsdoc/empty-tags": 'error',
     "jsdoc/implements-on-classes": 'error',
-    "jsdoc/match-description": 'off',
-    "jsdoc/newline-after-description": 'off',
     "jsdoc/no-bad-blocks": 'error',
-    "jsdoc/no-defaults": 'error',
-    "jsdoc/no-types": 'off',
-    "jsdoc/no-undefined-types": ['error', {
-      'definedTypes': ['ol'] // should this be allowed?
-    }],
-    "jsdoc/require-description": 'off',
-    "jsdoc/require-description-complete-sentence": 'off', // some issues with description starting with line break
-    "jsdoc/require-example": 'off',
-    "jsdoc/require-file-overview": 'off',
-    "jsdoc/require-hyphen-before-param-description": ['error', 'never'],
-    "jsdoc/require-jsdoc": 'off',
+    // "jsdoc/no-undefined-types": ['error', { 'definedTypes': ['ol'] }],
+      // this fails because of https://github.com/gajus/eslint-plugin-jsdoc/issues/559
+      // for main source this should not be needed because tsc already checks it
     "jsdoc/require-param": 'error',
-    "jsdoc/require-param-description": 'error',
+    "jsdoc/require-param-description": 'error', // this fails because of https://github.com/gajus/eslint-plugin-jsdoc/issues/686
     "jsdoc/require-param-name": 'error',
     "jsdoc/require-param-type": 'error',
     "jsdoc/require-property": 'error',
     "jsdoc/require-property-description": 'error',
     "jsdoc/require-property-name": 'error',
     "jsdoc/require-property-type": 'error',
-    "jsdoc/require-returns": 'off',
+    "jsdoc/require-returns": 'error',
     "jsdoc/require-returns-check": 'error',
     "jsdoc/require-returns-description": 'error',
     "jsdoc/require-returns-type": 'error',
-    "jsdoc/require-yields": 'error',
-    "jsdoc/valid-types": 'error',
+    // "jsdoc/valid-types": 'error', // this fails because of https://github.com/jsdoctypeparser/jsdoctypeparser/issues/133
+      // for main source this should not be needed because tsc already checks it
+    // "jsdoc/check-types": 'error', // for primitives. is aligned with mode 'typescript'. Needed because of tsc?
+
+    // stylistic
+    "jsdoc/check-alignment": 'error',
+    "jsdoc/check-examples": 'error',
+    "jsdoc/require-hyphen-before-param-description": ['error', 'never'],
+
+    // turned off
+    // "jsdoc/check-indentation": 'error', // we want indentation in certain cases
+    // "jsdoc/check-line-alignment": 'error',
+    // "jsdoc/check-values": 'error', // not needed
+    // "jsdoc/match-description": 'error', // regex could get adjusted ...
+    // "jsdoc/newline-after-description": 'error',
+    // "jsdoc/no-defaults": 'error',
+    // "jsdoc/no-types": 'error',
+    // "jsdoc/require-description": 'error',
+    // "jsdoc/require-description-complete-sentence": 'error', // some issues with description starting with line break
+    // "jsdoc/require-example": 'error',
+    // "jsdoc/require-file-overview": 'error',
+    // "jsdoc/require-jsdoc": 'error',
+    // "jsdoc/require-throws": 'error',
+    // "jsdoc/require-yields": 'error',
+
     'no-cond-assign': 'error',
     'no-console': 'error',
     'no-const-assign': 'error',
