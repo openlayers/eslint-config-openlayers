@@ -19,39 +19,42 @@ module.exports = {
     'import/extensions': ['error', 'always', {ignorePackages: true}],
 
     // validity
-    "jsdoc/check-access": 'error',
-    "jsdoc/check-param-names": 'error',
-    "jsdoc/check-property-names": 'error',
+    'jsdoc/check-access': 'error',
+    'jsdoc/check-param-names': 'error',
+    'jsdoc/check-property-names': 'error',
     // "jsdoc/check-syntax": 'error', // the mode is 'typescript' and it errors for closure syntax
-    "jsdoc/check-tag-names": ['error', {
-      "definedTags": ["api"]
-    }],
-    "jsdoc/empty-tags": 'error',
-    "jsdoc/implements-on-classes": 'error',
-    "jsdoc/no-bad-blocks": 'error',
+    'jsdoc/check-tag-names': [
+      'error',
+      {
+        definedTags: ['api', 'observable'],
+      },
+    ],
+    'jsdoc/empty-tags': 'error',
+    'jsdoc/implements-on-classes': 'error',
+    'jsdoc/no-bad-blocks': 'error',
     // "jsdoc/no-undefined-types": ['error', { 'definedTypes': ['ol'] }],
-      // this fails because of https://github.com/gajus/eslint-plugin-jsdoc/issues/559
-      // for main source this should not be needed because tsc already checks it
-    "jsdoc/require-param": 'error',
-    "jsdoc/require-param-description": 'error', // this fails because of https://github.com/gajus/eslint-plugin-jsdoc/issues/686
-    "jsdoc/require-param-name": 'error',
-    "jsdoc/require-param-type": 'error',
-    "jsdoc/require-property": 'error',
-    "jsdoc/require-property-description": 'error',
-    "jsdoc/require-property-name": 'error',
-    "jsdoc/require-property-type": 'error',
-    "jsdoc/require-returns": 'error',
-    "jsdoc/require-returns-check": 'error',
-    "jsdoc/require-returns-description": 'error',
-    "jsdoc/require-returns-type": 'error',
+    // this fails because of https://github.com/gajus/eslint-plugin-jsdoc/issues/559
+    // for main source this should not be needed because tsc already checks it
+    'jsdoc/require-param': 'error',
+    'jsdoc/require-param-description': 'error', // this fails because of https://github.com/gajus/eslint-plugin-jsdoc/issues/686
+    'jsdoc/require-param-name': 'error',
+    'jsdoc/require-param-type': 'error',
+    'jsdoc/require-property': 'error',
+    'jsdoc/require-property-description': 'error',
+    'jsdoc/require-property-name': 'error',
+    'jsdoc/require-property-type': 'error',
+    'jsdoc/require-returns': 'error',
+    'jsdoc/require-returns-check': 'error',
+    'jsdoc/require-returns-description': 'error',
+    'jsdoc/require-returns-type': 'error',
     // "jsdoc/valid-types": 'error', // this fails because of https://github.com/jsdoctypeparser/jsdoctypeparser/issues/133
-      // for main source this should not be needed because tsc already checks it
-    // "jsdoc/check-types": 'error', // for primitives. is aligned with mode 'typescript'. Needed because of tsc?
+    // for main source this should not be needed because tsc already checks it
+    // "jsdoc/check-types": 'error', // for primitives. is aligned with mode 'typescript'. Not needed because of tsc?
 
     // stylistic
-    "jsdoc/check-alignment": 'error',
-    "jsdoc/check-examples": 'error',
-    "jsdoc/require-hyphen-before-param-description": ['error', 'never'],
+    'jsdoc/check-alignment': 'error',
+    'jsdoc/check-examples': 'error',
+    'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
 
     // turned off
     // "jsdoc/check-indentation": 'error', // we want indentation in certain cases
@@ -120,14 +123,16 @@ module.exports = {
       },
     ],
     'use-isnan': 'error',
-    'valid-typeof': 'error'
+    'valid-typeof': 'error',
   },
-  'settings': {
-    'jsdoc': {
-      'mode': 'typescript',
-      "tagNamePreference": {
-        "returns": "return"
-      }
-    }
-  }
+  settings: {
+    jsdoc: {
+      mode: 'typescript',
+      tagNamePreference: {
+        'returns': 'return',
+        'constant': 'const',
+        'augments': 'extends',
+      },
+    },
+  },
 };
