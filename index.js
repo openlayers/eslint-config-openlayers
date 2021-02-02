@@ -40,7 +40,7 @@ module.exports = {
     'jsdoc/require-param-name': 'error',
     'jsdoc/require-param-type': 'error',
     'jsdoc/require-property': 'error',
-    'jsdoc/require-property-description': 'error',
+    // 'jsdoc/require-property-description': 'error',
     'jsdoc/require-property-name': 'error',
     'jsdoc/require-property-type': 'error',
     'jsdoc/require-returns': 'error',
@@ -130,6 +130,7 @@ module.exports = {
       mode: 'typescript',
       tagNamePreference: {
         'returns': 'return',
+        'file': 'fileoverview',
         'constant': 'const',
         'augments': 'extends',
       },
