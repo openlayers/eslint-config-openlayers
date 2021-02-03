@@ -18,19 +18,23 @@ module.exports = {
     'import/default': 'error',
     'import/extensions': ['error', 'always', {ignorePackages: true}],
     'jsdoc/check-access': 'error',
+    'jsdoc/check-alignment': 'error',
+    'jsdoc/check-examples': 'error',
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-property-names': 'error',
-    // "jsdoc/check-syntax": 'error', // the mode is 'typescript' and it errors for closure syntax
+    'jsdoc/check-syntax': 'error',
     'jsdoc/check-tag-names': [
       'error',
       {
         definedTags: ['api', 'observable'],
       },
     ],
+    'jsdoc/check-types': 'error',
     'jsdoc/empty-tags': 'error',
     'jsdoc/implements-on-classes': 'error',
     'jsdoc/no-bad-blocks': 'error',
     // "jsdoc/no-undefined-types": ['error', { 'definedTypes': ['ol'] }], // blocked by https://github.com/gajus/eslint-plugin-jsdoc/issues/559
+    'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
     'jsdoc/require-param': 'error',
     'jsdoc/require-param-description': 'error',
     'jsdoc/require-param-name': 'error',
@@ -44,10 +48,6 @@ module.exports = {
     'jsdoc/require-returns-description': 'error',
     'jsdoc/require-returns-type': 'error',
     // "jsdoc/valid-types": 'error', // blocked by https://github.com/jsdoctypeparser/jsdoctypeparser/issues/133
-    'jsdoc/check-types': 'error',
-    'jsdoc/check-alignment': 'error',
-    'jsdoc/check-examples': 'error',
-    'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
     'no-cond-assign': 'error',
     'no-console': 'error',
     'no-const-assign': 'error',
