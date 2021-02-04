@@ -33,21 +33,21 @@ module.exports = {
     'jsdoc/empty-tags': 'error',
     'jsdoc/implements-on-classes': 'error',
     'jsdoc/no-bad-blocks': 'error',
-    // "jsdoc/no-undefined-types": ['error', { 'definedTypes': ['ol'] }], // blocked by https://github.com/gajus/eslint-plugin-jsdoc/issues/559
+    // 'jsdoc/no-undefined-types': ['error', { 'definedTypes': ['ol'] }], // blocked by https://github.com/gajus/eslint-plugin-jsdoc/issues/559
     'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
     'jsdoc/require-param': 'error',
     'jsdoc/require-param-description': 'error',
     'jsdoc/require-param-name': 'error',
     'jsdoc/require-param-type': 'error',
     'jsdoc/require-property': 'error',
-    // 'jsdoc/require-property-description': 'error',
+    'jsdoc/require-property-description': 'error',
     'jsdoc/require-property-name': 'error',
     'jsdoc/require-property-type': 'error',
     'jsdoc/require-returns': 'error',
     'jsdoc/require-returns-check': 'error',
     'jsdoc/require-returns-description': 'error',
     'jsdoc/require-returns-type': 'error',
-    // "jsdoc/valid-types": 'error', // blocked by https://github.com/jsdoctypeparser/jsdoctypeparser/issues/133
+    // 'jsdoc/valid-types': 'error', // blocked by https://github.com/jsdoctypeparser/jsdoctypeparser/issues/133
     'no-cond-assign': 'error',
     'no-console': 'error',
     'no-const-assign': 'error',
