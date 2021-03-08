@@ -38,7 +38,7 @@ See the ESLint [CLI guide](http://eslint.org/docs/user-guide/command-line-interf
 
 In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  See the [ESLint integration page](http://eslint.org/docs/user-guide/integrations#editors) to find details on configuring your editor to warn you of ESLint errors.
 
-See the [examples directory](https://github.com/openlayers/eslint-config-openlayers/tree/master/examples) for more usage examples.
+See the [examples directory](https://github.com/openlayers/eslint-config-openlayers/tree/main/examples) for more usage examples.
 
 ### Profiles
 
@@ -69,7 +69,7 @@ Publishing a new minor release would look like this:
 
     # commit and push any changes first
     npm version minor # this bumps the package.json version number and tags
-    git push --tags origin master
+    git push --tags origin main
     npm publish
 
 ![Build Status](https://github.com/openlayers/eslint-config-openlayers/workflows/Test/badge.svg)
