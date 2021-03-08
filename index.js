@@ -7,7 +7,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
-  plugins: ['import', 'sort-imports-es6-autofix', 'prettier'],
+  plugins: ['import', 'sort-imports-es6-autofix', 'prettier', 'jsdoc'],
   extends: ['prettier'],
   rules: {
     'block-scoped-var': 'error',
@@ -17,6 +17,37 @@ module.exports = {
     'import/named': 'error',
     'import/default': 'error',
     'import/extensions': ['error', 'always', {ignorePackages: true}],
+    'jsdoc/check-access': 'error',
+    'jsdoc/check-alignment': 'error',
+    'jsdoc/check-examples': 'error',
+    'jsdoc/check-param-names': 'error',
+    'jsdoc/check-property-names': 'error',
+    'jsdoc/check-syntax': 'error',
+    'jsdoc/check-tag-names': [
+      'error',
+      {
+        definedTags: ['api', 'observable'],
+      },
+    ],
+    'jsdoc/check-types': 'error',
+    'jsdoc/empty-tags': 'error',
+    'jsdoc/implements-on-classes': 'error',
+    'jsdoc/no-bad-blocks': 'error',
+    // 'jsdoc/no-undefined-types': ['error', { 'definedTypes': ['ol'] }], // blocked by https://github.com/gajus/eslint-plugin-jsdoc/issues/559
+    'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
+    'jsdoc/require-param': 'error',
+    'jsdoc/require-param-description': 'error',
+    'jsdoc/require-param-name': 'error',
+    'jsdoc/require-param-type': 'error',
+    'jsdoc/require-property': 'error',
+    'jsdoc/require-property-description': 'error',
+    'jsdoc/require-property-name': 'error',
+    'jsdoc/require-property-type': 'error',
+    'jsdoc/require-returns': 'error',
+    'jsdoc/require-returns-check': 'error',
+    'jsdoc/require-returns-description': 'error',
+    'jsdoc/require-returns-type': 'error',
+    // 'jsdoc/valid-types': 'error', // blocked by https://github.com/jsdoctypeparser/jsdoctypeparser/issues/133
     'no-cond-assign': 'error',
     'no-console': 'error',
     'no-const-assign': 'error',
@@ -68,12 +99,21 @@ module.exports = {
       },
     ],
     'use-isnan': 'error',
-    'valid-jsdoc': [
-      'error',
-      {
-        requireReturn: false,
-      },
-    ],
     'valid-typeof': 'error',
+  },
+  settings: {
+    jsdoc: {
+      mode: 'typescript',
+      preferredTypes: {
+        '[]': 'Array<>',
+        '.<>': '<>',
+      },
+      tagNamePreference: {
+        'returns': 'return',
+        'file': 'fileoverview',
+        'constant': 'const',
+        'augments': 'extends',
+      },
+    },
   },
 };
