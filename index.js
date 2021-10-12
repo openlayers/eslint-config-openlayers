@@ -6,6 +6,7 @@ module.exports = {
   },
   parserOptions: {
     sourceType: 'module',
+    ecmaVersion: 'latest',
   },
   plugins: ['import', 'sort-imports-es6-autofix', 'prettier', 'jsdoc'],
   extends: ['prettier'],
