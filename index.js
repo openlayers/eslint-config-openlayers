@@ -15,6 +15,7 @@ module.exports = {
     curly: 'error',
     'default-case': 'error',
     'import/no-unresolved': ['error', {commonjs: true}],
+    'import/no-duplicates': 'error',
     'import/named': 'error',
     'import/default': 'error',
     'import/extensions': ['error', 'always', {ignorePackages: true}],
