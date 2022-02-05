@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-openlayers",
-  "version": "16.0.1",
+  "version": "16.1.0",
   "description": "ESLint configuration for OpenLayers",
   "main": "index.js",
   "repository": {
