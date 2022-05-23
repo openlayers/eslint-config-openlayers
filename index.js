@@ -109,6 +109,7 @@ module.exports = {
       preferredTypes: {
         '[]': 'Array<>',
         '.<>': '<>',
+        'object': 'Object',
       },
       tagNamePreference: {
         'returns': 'return',

@@ -8,3 +8,66 @@ export function foo() {
   // option for prettier if not.
   return obj['bar'];
 }
+
+/**
+ * @typedef {Object} SoupOptions
+ * @property {string} [type='chicken'] The type of soup.
+ * @property {boolean} [noodles=false] Include noodles.
+ * @property {Array<string>} [vegetables=[]] The vegetables.
+ */
+
+/**
+ * @classdesc
+ * Soup.
+ *
+ * @api
+ */
+export class Soup {
+  /**
+   * Construct a soup.
+   * @param {SoupOptions} options The soup options.
+   */
+  constructor(options) {
+    /**
+     * @private
+     * @type {string}
+     */
+    this.type_ = options.type || 'chicken';
+
+    /**
+     * @private
+     * @type {boolean}
+     */
+    this.noodles_ = !!options.noodles;
+
+    /**
+     * @private
+     * @type {Array<string>}
+     */
+    this.vegetables_ = options.vegetables || [];
+  }
+
+  /**
+   * Get the soup type.
+   * @return {string} The type of soup.
+   */
+  getType() {
+    return this.type_;
+  }
+
+  /**
+   * Check if the soup has noodles.
+   * @return {boolean} The soup has noodles.
+   */
+  hasNoodles() {
+    return this.noodles_;
+  }
+
+  /**
+   * Get the vegetables.
+   * @return {Array<string>} The vegetables.
+   */
+  getVegetables() {
+    return this.vegetables_;
+  }
+}
