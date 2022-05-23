@@ -10,7 +10,22 @@ export function foo() {
 }
 
 /**
+ * @typedef {Object} FoodOptions
+ * @property {number} calories The number of calories.
+ */
+
+export class Food {
+  constructor(options) {
+    /**
+     * @type {number}
+     */
+    this.calories = options.calories;
+  }
+}
+
+/**
  * @typedef {Object} SoupOptions
+ * @property {number} calories The number of calories.
  * @property {string} [type='chicken'] The type of soup.
  * @property {boolean} [noodles=false] Include noodles.
  * @property {Array<string>} [vegetables=[]] The vegetables.
@@ -22,12 +37,14 @@ export function foo() {
  *
  * @api
  */
-export class Soup {
+export class Soup extends Food {
   /**
    * Construct a soup.
    * @param {SoupOptions} options The soup options.
    */
   constructor(options) {
+    super({calories: options.calories});
+
     /**
      * @private
      * @type {string}
@@ -69,5 +86,21 @@ export class Soup {
    */
   getVegetables() {
     return this.vegetables_;
+  }
+}
+
+/**
+ * @template {Food} [F=Soup]
+ */
+export class Restaurant {
+  /**
+   * @param {Array<F>} menu The menu items.
+   */
+  constructor(menu) {
+    /**
+     * @private
+     * @type {Array<F>}
+     */
+    this.menu_ = [];
   }
 }
