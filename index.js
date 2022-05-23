@@ -21,7 +21,7 @@ module.exports = {
     'import/extensions': ['error', 'always', {ignorePackages: true}],
     'jsdoc/check-access': 'error',
     'jsdoc/check-alignment': 'error',
-    'jsdoc/check-examples': 'error',
+    // 'jsdoc/check-examples': 'error', // blocked by https://github.com/eslint/eslint/issues/14745
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-property-names': 'error',
     'jsdoc/check-syntax': 'error',
@@ -35,7 +35,7 @@ module.exports = {
     'jsdoc/empty-tags': 'error',
     'jsdoc/implements-on-classes': 'error',
     'jsdoc/no-bad-blocks': 'error',
-    // 'jsdoc/no-undefined-types': ['error', { 'definedTypes': ['ol'] }], // blocked by https://github.com/gajus/eslint-plugin-jsdoc/issues/559
+    'jsdoc/no-undefined-types': ['error', {'definedTypes': ['ol']}],
     'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
     'jsdoc/require-param': 'error',
     'jsdoc/require-param-description': 'error',
