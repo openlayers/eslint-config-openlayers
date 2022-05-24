@@ -35,7 +35,12 @@ module.exports = {
     'jsdoc/empty-tags': 'error',
     'jsdoc/implements-on-classes': 'error',
     'jsdoc/no-bad-blocks': 'error',
-    // 'jsdoc/no-undefined-types': ['error', {'definedTypes': ['ol']}], // blocked by https://github.com/gajus/eslint-plugin-jsdoc/issues/887
+    'jsdoc/no-undefined-types': [
+      'error',
+      {
+        'definedTypes': ['Float32ArrayConstructor', 'Uint32ArrayConstructor'],
+      },
+    ],
     'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
     'jsdoc/require-param': 'error',
     'jsdoc/require-param-description': 'error',

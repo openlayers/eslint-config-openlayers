@@ -104,3 +104,22 @@ export class Restaurant {
     this.menu_ = [];
   }
 }
+
+const ELEMENT_ARRAY_BUFFER = 0x8893;
+const ARRAY_BUFFER = 0x8892;
+
+/**
+ * Returns a typed array constructor based on the given buffer type
+ * @param {number} type Buffer type, either ARRAY_BUFFER or ELEMENT_ARRAY_BUFFER.
+ * @return {Float32ArrayConstructor|Uint32ArrayConstructor} The typed array class to use for this buffer.
+ */
+export function getArrayClassForType(type) {
+  switch (type) {
+    case ARRAY_BUFFER:
+      return Float32Array;
+    case ELEMENT_ARRAY_BUFFER:
+      return Uint32Array;
+    default:
+      return Float32Array;
+  }
+}
