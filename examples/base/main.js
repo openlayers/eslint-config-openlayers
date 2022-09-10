@@ -9,9 +9,9 @@ function main(paths) {
         fs.readFile(name, (err, data) => {
           if (err) {
             reject(err);
-          } else {
-            resolve(String(data));
+            return;
           }
+          resolve(String(data));
         });
       });
     })
