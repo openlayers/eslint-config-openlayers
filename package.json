@@ -29,7 +29,7 @@
     "eslint-plugin-react": "^7.30.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
-    "react-dom": "^16.8.6"
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",
