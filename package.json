@@ -34,7 +34,7 @@
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.25.1",
-    "eslint-plugin-jsdoc": "^46.2.6",
+    "eslint-plugin-jsdoc": "^47.0.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "prettier": "^2.4.1"
