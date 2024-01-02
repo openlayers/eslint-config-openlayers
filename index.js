@@ -9,7 +9,6 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   plugins: ['import', 'sort-imports-es6-autofix', 'prettier', 'jsdoc'],
-  extends: ['prettier'],
   rules: {
     'block-scoped-var': 'error',
     curly: 'error',

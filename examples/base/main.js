@@ -14,7 +14,7 @@ function main(paths) {
           resolve(String(data));
         });
       });
-    })
+    }),
   );
 }
 
