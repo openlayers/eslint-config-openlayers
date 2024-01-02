@@ -12,9 +12,7 @@
   },
   "scripts": {
     "lint": "eslint . examples",
-    "test": "npm run check-base && npm run check-react && npm run lint",
-    "check-base": "npx eslint-config-prettier index.js",
-    "check-react": "npx eslint-config-prettier react.js"
+    "test": "npm run lint"
   },
   "files": [
     "index.js",
@@ -32,11 +30,10 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.25.1",
     "eslint-plugin-jsdoc": "^47.0.1",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "prettier": "^2.4.1"
+    "prettier": "^3.1.1"
   }
 }
