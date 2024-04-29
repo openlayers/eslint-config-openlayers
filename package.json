@@ -23,7 +23,7 @@
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^8.53.0",
+    "eslint": "^9.1.1",
     "eslint-plugin-react": "^7.30.0",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
