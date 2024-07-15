@@ -22,7 +22,7 @@
     "extends": "./index.js"
   },
   "devDependencies": {
-    "eslint": "^8.53.0"
+    "eslint": "^9.7.0"
   },
   "dependencies": {
     "eslint-plugin-import": "^2.25.1",
