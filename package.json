@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-openlayers",
-  "version": "19.0.0",
+  "version": "20.0.0-beta.2",
   "description": "ESLint configuration for OpenLayers",
   "type": "module",
   "main": "index.js",
