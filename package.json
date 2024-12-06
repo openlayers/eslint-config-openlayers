@@ -2,7 +2,14 @@
   "name": "eslint-config-openlayers",
   "version": "19.0.0",
   "description": "ESLint configuration for OpenLayers",
+  "type": "module",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/openlayers/eslint-config-openlayers.git"
@@ -14,21 +21,15 @@
     "lint": "eslint . examples",
     "test": "npm run lint"
   },
-  "files": [
-    "index.js"
-  ],
   "license": "MIT",
-  "eslintConfig": {
-    "extends": "./index.js"
-  },
   "devDependencies": {
-    "eslint": "^8.53.0"
+    "eslint": "^9.16.0"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.25.1",
-    "eslint-plugin-jsdoc": "^50.0.1",
-    "eslint-plugin-prettier": "^5.1.2",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "prettier": "^3.1.1"
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.4.2"
   }
 }
