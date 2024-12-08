@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`no-exclusive-tests > invalid use of "describe.only()" 1`] = `
+[
+  {
+    "column": 18,
+    "endColumn": 22,
+    "endLine": 2,
+    "line": 2,
+    "message": "Exlusive tests are not allowed",
+    "nodeType": "Identifier",
+    "ruleId": "no-exclusive-tests",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`no-exclusive-tests > invalid use of "describe.only()" and "it.only()" 1`] = `
+[
+  {
+    "column": 18,
+    "endColumn": 22,
+    "endLine": 2,
+    "line": 2,
+    "message": "Exlusive tests are not allowed",
+    "nodeType": "Identifier",
+    "ruleId": "no-exclusive-tests",
+    "severity": 2,
+  },
+  {
+    "column": 14,
+    "endColumn": 18,
+    "endLine": 3,
+    "line": 3,
+    "message": "Exlusive tests are not allowed",
+    "nodeType": "Identifier",
+    "ruleId": "no-exclusive-tests",
+    "severity": 2,
+  },
+]
+`;
+
+exports[`no-exclusive-tests > invalid use of "it.only()" 1`] = `
+[
+  {
+    "column": 14,
+    "endColumn": 18,
+    "endLine": 3,
+    "line": 3,
+    "message": "Exlusive tests are not allowed",
+    "nodeType": "Identifier",
+    "ruleId": "no-exclusive-tests",
+    "severity": 2,
+  },
+]
+`;

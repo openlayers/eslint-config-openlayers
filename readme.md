@@ -8,15 +8,18 @@ To make use of this config, install ESLint and this package as a development dep
 
     npm install eslint eslint-config-openlayers --save-dev
 
-Next, create a `.eslintrc` file at the root of your project.  At a minimum, this config file must include an `extends` member:
+Next, create a `eslint.config.js` file at the root of your project.  This file should export the openlayers configuration along with any overrides your project might include:
 
-```json
-{
-  "extends": "openlayers"
-}
+```js
+// eslint.config.js
+import openlayers from 'eslint-config-openlayers';
+
+export default [
+  ...openlayers
+];
 ```
 
-See the ESLint [configuration guide](http://eslint.org/docs/user-guide/configuring) for details on additional configuration options.  Any rules configured in your `.eslintrc` file will override those provided by the `eslint-config-openlayers` package.
+See the ESLint [configuration guide](http://eslint.org/docs/user-guide/configuring) for details on additional configuration options.  Any rules configured in your `eslint.config.js` file will override those provided by the `eslint-config-openlayers` package.
 
 ### Use
 
@@ -38,22 +41,14 @@ See the ESLint [CLI guide](http://eslint.org/docs/user-guide/command-line-interf
 
 In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  See the [ESLint integration page](http://eslint.org/docs/user-guide/integrations#editors) to find details on configuring your editor to warn you of ESLint errors.
 
-See the [examples directory](https://github.com/openlayers/eslint-config-openlayers/tree/main/examples) for more usage examples.
-
-### Profiles
-
-The `eslint-config-openlayers` package includes a number of ESLint configuration profiles for different types of projects.
-
-#### `openlayers` (base config)
-
-The "base" config is suitable for Node projects or browser-based projects using a CommonJS module loader (e.g. [Browserify](http://browserify.org/) or [Webpack](http://webpack.github.io/)).
-
-Example `.eslintrc`:
+If you are using VSCode, you'll need to configure it to use ESLint's flat config syntax:
 ```json
 {
-  "extends": "openlayers"
+  "eslint.useFlatConfig": true
 }
 ```
+
+See the [examples directory](https://github.com/openlayers/eslint-config-openlayers/tree/main/examples) for more usage examples.
 
 ### Development
 
