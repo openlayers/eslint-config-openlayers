@@ -1,7 +1,7 @@
 /**
  * @fileoverview Generates an error if describe.only() or it.only() is found.
  */
-import minimatch from 'minimatch';
+import {minimatch} from 'minimatch';
 
 const names = {
   describe: true,
