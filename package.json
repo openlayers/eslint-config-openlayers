@@ -26,7 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^9.16.0",
-    "eslint-vitest-rule-tester": "^1.1.0",
+    "eslint-vitest-rule-tester": "^3.0.0",
     "vitest": "^3.0.3"
   },
   "dependencies": {
