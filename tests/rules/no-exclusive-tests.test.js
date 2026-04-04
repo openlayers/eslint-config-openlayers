@@ -1,6 +1,6 @@
 import {createRuleTester} from 'eslint-vitest-rule-tester';
 import {describe, expect, test} from 'vitest';
-import configs from '../../index.js';
+import {languageOptions} from '../../index.js';
 import rule from '../../rules/no-exclusive-tests.js';
 
 describe('no-exclusive-tests', () => {
@@ -8,7 +8,7 @@ describe('no-exclusive-tests', () => {
     name: 'no-exclusive-tests',
     rule,
     configs: {
-      languageOptions: configs[0].languageOptions,
+      languageOptions,
     },
   });
 
@@ -34,8 +34,8 @@ describe('no-exclusive-tests', () => {
     });
   });
 
-  test('invalid use of "describe.only()"', () => {
-    const result = invalid({
+  test('invalid use of "describe.only()"', async () => {
+    const result = await invalid({
       filename: 'invalid.test.js',
       code: `
         describe.only('example invalid use of "describe.only()"', () => {
@@ -46,11 +46,11 @@ describe('no-exclusive-tests', () => {
       `,
     });
 
-    expect(result.messages).toMatchSnapshot();
+    expect(result.result.messages).toMatchSnapshot();
   });
 
-  test('invalid use of "it.only()"', () => {
-    const result = invalid({
+  test('invalid use of "it.only()"', async () => {
+    const result = await invalid({
       filename: 'invalid.test.js',
       code: `
         describe('example valid use of "describe()"', () => {
@@ -61,11 +61,11 @@ describe('no-exclusive-tests', () => {
       `,
     });
 
-    expect(result.messages).toMatchSnapshot();
+    expect(result.result.messages).toMatchSnapshot();
   });
 
-  test('invalid use of "describe.only()" and "it.only()"', () => {
-    const result = invalid({
+  test('invalid use of "describe.only()" and "it.only()"', async () => {
+    const result = await invalid({
       filename: 'invalid.test.js',
       code: `
         describe.only('example invalid use of "describe.only()"', () => {
@@ -76,6 +76,6 @@ describe('no-exclusive-tests', () => {
       `,
     });
 
-    expect(result.messages).toMatchSnapshot();
+    expect(result.result.messages).toMatchSnapshot();
   });
 });

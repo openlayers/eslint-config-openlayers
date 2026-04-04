@@ -1,8 +1,17 @@
-import importPlugin from 'eslint-plugin-import';
 import jsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import noExclusiveTests from './rules/no-exclusive-tests.js';
+
+export const languageOptions = {
+  globals: {
+    ...globals.node,
+    ...globals.browser,
+  },
+
+  ecmaVersion: 'latest',
+  sourceType: 'module',
+};
 
 export const plugin = {
   rules: {
@@ -11,19 +20,10 @@ export const plugin = {
 };
 
 export default [
-  importPlugin.flatConfigs.recommended,
   jsdoc.configs['flat/recommended'],
   eslintPluginPrettierRecommended,
   {
-    languageOptions: {
-      globals: {
-        ...globals.node,
-        ...globals.browser,
-      },
-
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
+    languageOptions,
 
     plugins: {
       openlayers: plugin,
@@ -89,22 +89,6 @@ export default [
       'use-isnan': 'error',
       'valid-typeof': 'error',
 
-      // import plugin
-      'import/no-unresolved': ['error', {commonjs: true}],
-      'import/no-duplicates': 'error',
-      'import/named': 'error',
-      'import/order': [
-        'error',
-        {
-          named: true,
-          alphabetize: {
-            order: 'asc',
-          },
-        },
-      ],
-      'import/default': 'error',
-      'import/extensions': ['error', 'always', {ignorePackages: true}],
-
       // jsdoc plugin
       'jsdoc/check-access': 'error',
       'jsdoc/check-alignment': 'error',
@@ -150,6 +134,7 @@ export default [
           singleQuote: true,
           bracketSpacing: false,
           quoteProps: 'preserve',
+          plugins: ['prettier-plugin-organize-imports'],
         },
       ],
     },

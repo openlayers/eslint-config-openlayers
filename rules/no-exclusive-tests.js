@@ -39,7 +39,7 @@ export default {
           return;
         }
 
-        const filename = context.getFilename();
+        const filename = context.filename || context.getFilename();
         const include = context.options.include || '**/*.test.js';
         if (!minimatch(filename, include)) {
           return;

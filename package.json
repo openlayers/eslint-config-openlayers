@@ -25,17 +25,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^9.16.0",
-    "eslint-vitest-rule-tester": "^1.1.0",
-    "vitest": "^3.0.3"
+    "eslint": "^10.2.0",
+    "eslint-vitest-rule-tester": "^3.1.0",
+    "vitest": "^4.1.2"
   },
   "dependencies": {
     "@openlayers/doctrine": "^2.2.0",
     "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^61.1.1",
+    "eslint-plugin-jsdoc": "^62.9.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^17.4.0",
     "minimatch": "^10.0.1",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.3.0"
   }
 }
